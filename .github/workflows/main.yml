@@ -101,7 +101,7 @@ jobs:
 
   test-linux:
     needs: build-linux
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     env:
       DOTNET_NOLOGO: 1
       DOTNET_CLI_TELEMETRY_OPTOUT: 1
@@ -241,7 +241,7 @@ jobs:
         run: ./common/test.ps1 -NuGet nuget
 
   release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs:
       - build-linux
       - build-macos
